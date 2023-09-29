@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/output.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../fontawesome-free-6.4.0-web/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script> -->
+</head>
+
+<body>
+    <div class="content">
+        <div class="container mx-auto">
+            <nav class="flex justify-between items-center pt-5">
+                <h1>devfinder</h1>
+                <div class="flex items-center">
+                    <label onclick="toggleDarkMode()" class="text-gray-400 mr-2 toggle-button">
+                        <span id="toggle-text">Dark</span> <i id="toggle-btn" class="fas fa-sun"
+                            style="color: #697c9a;"></i>
+                    </label>
+                </div>
+            </nav>
+            <div class="form-search pt-4">
+                <form id="github-form" action="" method="GET" class="flex drop-shadow-md">
+                    <input type="text" id="username-input" placeholder="Search GitHub username…"
+                        class="px-3 py-3 border search rounded-lg focus:outline-none focus:ring focus:border-blue-300 w-full" />
+                    <button type="submit" class="bg-blue-500 text-white px-4 mt-2 mb-2 rounded-lg 
+                        hover:bg-blue-300 focus:outline-none focus:ring focus:border-blue-300">
+                        Search
+                    </button>
+                </form>
+                <!-- Error message element -->
+                <p id="error-message" class="text-red-500 mt-2"></p>
+            </div>
+
+            <div class="container-fluid mt-3 body-card drop-shadow-lg ">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="row">
+                            <div class="col-md-4 col-6">
+                                <img src="../bitmap.png" class="w-50 rounded-circle img-fluid" alt="">
+                            </div>
+                            <div class="col-md-4 col-6 first-text">
+                               <h1>Bussyboo98</h1>
+                               <p>@bussyboo</p>
+                               <p class="d-md-none"> Joined 25 Jan 2011</p>
+                            </div>
+                            <div class="col-md-4 col-12">
+                               <p class="date"> Joined 25 Jan 2011</p>
+                            </div>
+                            <div class="col-md-9 offset-md-3 para">
+                               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam reprehenderit necessitatibus excepturi nulla temporibus eos ullam? Nisi deserunt debitis quam, quaerat placeat maxime ad odio ea fuga quo aspernatur voluptatum.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-9 offset-md-3 col-12 info rounded-lg">
+                            <div class="shadow-md  p-3 ">
+                                <div class="row text-justify box1">
+                                    <div class="col-4">
+                                        <p>Repo</p><br>
+                                        <span>8</span>
+                                    </div>
+                                    <div class="col-4">
+                                        <p>Followers</p><br>
+                                        <span>3674</span>
+                                    </div>
+                                    <div class="col-4">
+                                        <p>Following</p><br>
+                                        <span>89</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-9  offset-md-3 mt-2 social  col-sm-12 pb-4">
+                            <div class="row text-justify">
+                                <div class="col-md-6 col-sm-12">
+                                    <p><i class="fa-solid fa-location-dot"></i> San Francisco</p>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <p><i class="fa-brands fa-twitter"></i> Not Available</p>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <p><i class="fa-solid fa-link"></i><a href="Fhttps://github.blog">
+                                            Fhttps://github.blog</a></p>
+                                </div>
+                                <div class="col-md-6 col-sm-12 ">
+                                    <p><i class="fa-solid fa-building"></i> Fhttps://github.blog</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
