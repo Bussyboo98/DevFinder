@@ -68,6 +68,7 @@ function fetchGitHubUserData(username) {
            userCard.querySelector('h1').textContent = data.login;
            userCard.querySelector('p').textContent = `@${data.login}`;
            userCard.querySelector('.date').textContent = `Joined ${new Date(data.created_at).toLocaleDateString()}`;
+           userCard.querySelector('.date1').textContent = `Joined ${new Date(data.created_at).toLocaleDateString()}`;
            userCard.querySelector('.para p').textContent = data.bio || 'No bio yet....';
 
            // Update the statistics
@@ -77,10 +78,10 @@ function fetchGitHubUserData(username) {
            statistics[2].textContent = data.following;
 
            // Update the social links
-           const socialLinks = userCard.querySelectorAll('.social p a');
-           socialLinks[0].href = data.blog || '';
+           const socialLinks = userCard.querySelectorAll('.social p  ');
+           socialLinks[0].textContent = data.location || 'Location Unavailable';
            socialLinks[1].textContent = data.twitter_username ? `@${data.twitter_username}` : 'Not Available';
-           socialLinks[2].textContent = data.blog || 'Not Available';
+           socialLinks[2].textContent= data.repos_url || 'Not Available';
            socialLinks[3].textContent = data.company || 'Not Available';
        })
        .catch(error => {
