@@ -25,7 +25,7 @@ const disableDarkMode = () => {
    const bodyCard = document.querySelector('.body-card');
    bodyCard.style.backgroundColor = 'white';
    const infoCard = document.querySelector('.info');
-   infoCard.style.backgroundColor = 'white';
+   infoCard.style.backgroundColor = '#F6F8FF';
    const searchCard = document.querySelector('.search');
    searchCard.style.backgroundColor = 'white';
 }
@@ -78,10 +78,16 @@ function fetchGitHubUserData(username) {
            statistics[2].textContent = data.following;
 
            // Update the social links
-           const socialLinks = userCard.querySelectorAll('.social p  ');
+           const socialLinks = userCard.querySelectorAll('.social p');
            socialLinks[0].textContent = data.location || 'Location Unavailable';
            socialLinks[1].textContent = data.twitter_username ? `@${data.twitter_username}` : 'Not Available';
-           socialLinks[2].textContent= data.repos_url || 'Not Available';
+
+           // Update the "GitHub repo" link
+           const githubRepoLink = userCard.querySelector('.fa-solid.fa-link + a');
+           githubRepoLink.href = data.html_url; 
+           githubRepoLink.innerHTML = data.html_url; 
+
+           socialLinks[3].textContent = data.company || 'Not Available';
            socialLinks[3].textContent = data.company || 'Not Available';
        })
        .catch(error => {
